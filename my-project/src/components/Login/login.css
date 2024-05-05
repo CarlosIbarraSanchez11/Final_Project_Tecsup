@@ -1,8 +1,0 @@
-.bg-primary {
-  background-color: #007bff; /* Color primario */
-  transition: background-color 0.3s ease; /* Transición suave */
-}
-
-.bg-primary:hover {
-  background-color: #4d94ff; /* Color primario más claro al hacer hover */
-}
