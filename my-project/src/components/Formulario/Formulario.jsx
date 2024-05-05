@@ -1,6 +1,6 @@
 // Hooks
 import { useState, useEffect } from "react";
-import Error from "./Error";
+import Error from "../Error/Error";
 
 const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
   //Aca declarar nuestros states

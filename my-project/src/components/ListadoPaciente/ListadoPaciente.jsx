@@ -1,4 +1,4 @@
-import Paciente from "./Paciente";
+import Paciente from "../Paciente/Paciente";
 // import {useEffect} from 'react';
 
 const ListadoPaciente = ({ pacientes, setPaciente, eliminarPaciente }) => {
