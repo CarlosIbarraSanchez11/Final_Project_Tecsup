@@ -1,6 +1,8 @@
 import profile from "../../assets/profile.jpg";
-import login from "../../assets/login.jpg";
+// import login from "../../assets/login.jpg";
+import login2 from "../../assets/login2.jpg";
 import { useState } from "react";
+import "./login.css";
 
 import appFirebase from "../../credenciales";
 import {
@@ -32,47 +34,63 @@ const Login = () => {
   };
 
   return (
-    <div className="">
-      <div className="">
-        {/* Columna para el formulario */}
-        <div className="">
-          <div className="padre">
-            <div className="">
-              <img src={profile} className="estilo-profile" />
-              <form onSubmit={functAutenticacion}>
-                <input
-                  type="text"
-                  placeholder="Ingresar Email"
-                  className="caja-texto"
-                  id="email"
-                />
-                <input
-                  type="password"
-                  placeholder="Ingresar Password"
-                  className="caja-texto"
-                  id="password"
-                />
-                <button className="">
-                  {registrando ? "Registrate" : "Inicia Sesión"}
-                </button>
-              </form>
-              <h4 className="texto">
-                {registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}
-                <button
-                  onClick={() => setRegistrando(!registrando)}
-                  className="btnswitch"
-                >
-                  {registrando ? "Inicia Sesión" : "Registrate"}
-                </button>
-              </h4>
-            </div>
-          </div>
+    <section className="h-screen flex justify-center items-center">
+      {/* Columna para el formulario */}
+      <div className="flex flex-wrap items-center justify-center lg:justify-between w-full lg:w-3/4 xl:w-1/2">
+        <div className="w-full lg:w-3/6">
+          <img src={login2} alt="Login" className="w-full" />
         </div>
-        <div className="">
-          <img src={login} alt="" className="tamaño-imagen" />
+        {/* Formulario */}
+        <div className="w-full lg:w-2/6">
+          <div className="text-center mb-8">
+            <img
+              src={profile}
+              alt="Profile"
+              className="mx-auto estilo-profile"
+            />
+          </div>
+          <form onSubmit={functAutenticacion} className="px-4 lg:px-0">
+            <div className="mb-6">
+              <input
+                type="text"
+                className="w-full px-3 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
+                placeholder="Ingresar Email"
+                id="email"
+              />
+            </div>
+            <div className="mb-6">
+              <input
+                type="password"
+                className="w-full px-3 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
+                id="password"
+                placeholder="Password"
+              />
+            </div>
+
+            <div className="text-center lg:text-left">
+              <button
+                type="submit"
+                className="w-full bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
+              >
+                {registrando ? "Registrate" : "Inicia Sesión"}
+              </button>
+              {/* <button className="">
+                {registrando ? "Registrate" : "Inicia Sesión"}
+              </button> */}
+            </div>
+          </form>
+          <h4 className="texto">
+            {registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}
+            <button
+              onClick={() => setRegistrando(!registrando)}
+              className="btnswitch"
+            >
+              {registrando ? "Inicia Sesión" : "Registrate"}
+            </button>
+          </h4>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
