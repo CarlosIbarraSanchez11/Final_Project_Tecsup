@@ -37,7 +37,7 @@ const Login = () => {
     <section className="h-screen flex justify-center items-center">
       {/* Columna para el formulario */}
       <div className="flex flex-wrap items-center justify-center lg:justify-between w-full lg:w-3/4 xl:w-1/2">
-        <div className="w-full lg:w-3/6">
+        <div className="px-4 w-full lg:w-3/6">
           <img src={login2} alt="Login" className="w-full" />
         </div>
         {/* Formulario */}
