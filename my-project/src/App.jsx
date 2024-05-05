@@ -1,6 +1,6 @@
 import "./App.css";
 // Importar bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 // Importando los modulos de firebase
 import appFirebase from "../src/credenciales";

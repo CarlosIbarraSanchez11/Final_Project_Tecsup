@@ -32,12 +32,12 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
-      <div className="row">
+    <div className="">
+      <div className="">
         {/* Columna para el formulario */}
-        <div className="col-md-4">
+        <div className="">
           <div className="padre">
-            <div className="card card-body shadow">
+            <div className="">
               <img src={profile} className="estilo-profile" />
               <form onSubmit={functAutenticacion}>
                 <input
@@ -52,7 +52,7 @@ const Login = () => {
                   className="caja-texto"
                   id="password"
                 />
-                <button className="btn-form">
+                <button className="">
                   {registrando ? "Registrate" : "Inicia Sesión"}
                 </button>
               </form>
@@ -68,7 +68,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-8">
+        <div className="">
           <img src={login} alt="" className="tamaño-imagen" />
         </div>
       </div>
