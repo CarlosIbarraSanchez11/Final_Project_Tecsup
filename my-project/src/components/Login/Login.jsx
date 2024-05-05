@@ -36,11 +36,16 @@ const Login = () => {
   return (
     <section className="h-screen flex justify-center items-center">
       {/* Columna para el formulario */}
-      <div className="flex flex-wrap items-center justify-center lg:justify-between w-full lg:w-3/4 xl:w-1/2">
-        <div className="px-4 w-full lg:w-3/6">
-          <img src={login2} alt="Login" className="w-full" />
+      <div className="flex flex-col lg:flex-row items-stretch justify-center lg:justify-between w-full lg:w-3/4 xl:w-1/2">
+        {/* Lado izquierdo */}
+        <div className="flex flex-col lg:flex-row px-4 w-full lg:w-3/6 max-h-120">
+          <img
+            src={login2}
+            alt="Login"
+            className="w-full h-auto lg:h-full rounded-lg"
+          />
         </div>
-        {/* Formulario */}
+        {/* Lado derecho */}
         <div className="w-full lg:w-2/6">
           <div className="text-center mb-8">
             <img
@@ -49,6 +54,7 @@ const Login = () => {
               className="mx-auto estilo-profile"
             />
           </div>
+          <p className="mb-5 text-center">Sign in up Here</p>
           <form onSubmit={functAutenticacion} className="px-4 lg:px-0">
             <div className="mb-6">
               <input
