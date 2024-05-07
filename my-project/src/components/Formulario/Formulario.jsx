@@ -93,12 +93,15 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
 
   return (
     <div className="md:w-1/2 lg:w-2/5 mx-5">
-      <h2 className="font-black text-3xl text-center">Seguimiento Pacientes</h2>
+      <main>
+        <h2 className="font-black text-2xl underline text-center">Seguimiento de pacientes</h2>
 
-      <p className="text-lg mt-5 text-center mb-10">
-        Añade Pacientes y {""}
-        <span className="text-indigo-600 font-bold ">Administralos</span>
-      </p>
+        <p className="text-lg mt-5 text-center mb-10 font-semibold">
+          Añade un paciente y
+          <span className="text-indigo-600 font-bold "> administralo</span>
+        </p>
+      </main>
+
 
       <form
         onSubmit={handleSubmit}
@@ -119,7 +122,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
             type="text"
             id="mascota"
             placeholder="Nombre de la mascota"
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md focus:outline-none focus:border-indigo-400"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
           />
@@ -136,7 +139,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
             type="text"
             id="propietario"
             placeholder="Nombre del propietario"
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md focus:outline-none focus:border-indigo-400"
             value={propietario}
             onChange={(e) => setPropietario(e.target.value)}
           />
@@ -152,8 +155,8 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
           <input
             type="email"
             id="email"
-            placeholder="Email contacto propietario"
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            placeholder="Email del propietario"
+            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md focus:outline-none focus:border-indigo-400"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -163,13 +166,13 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
             htmlFor="alta"
             className="block text-gray-700 uppercase font-bold"
           >
-            Alta
+            Fecha de atención
           </label>
 
           <input
             type="date"
-            id="alta"
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            id="atencion"
+            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md focus:outline-none focus:border-indigo-400"
             value={fecha}
             onChange={(e) => setFecha(e.target.value)}
           />
@@ -183,7 +186,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
           </label>
           <textarea
             id="sintomas"
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md focus:outline-none focus:border-indigo-400"
             placeholder="Describe los sintomas"
             value={sintomas}
             onChange={(e) => setSintomas(e.target.value)}
@@ -191,7 +194,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
         </div>
         <input
           type="submit"
-          className="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-all"
+          className="bg-indigo-400 w-full p-3 text-black uppercase font-bold hover:bg-indigo-700 hover:text-white cursor-pointer transition-all"
           value={paciente.id ? "Editar Paciente" : "Agregar Paciente"}
         />
       </form>
