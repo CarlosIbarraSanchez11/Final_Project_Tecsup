@@ -6,10 +6,16 @@
 }
 
 .btnswitch {
-  background-color: darkblue;
+  background-color: rgb(128, 128, 185);
   border-radius: 5px;
-  padding: 8px;
-  border-width: 0;
-  color: wheat;
-  font-size: 16px;
+  padding: 6px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.texto-login{
+  font-size: 14px;
+  color: slategray;
+
 }
