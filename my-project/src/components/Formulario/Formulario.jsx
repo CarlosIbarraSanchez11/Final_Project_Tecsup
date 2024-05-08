@@ -6,6 +6,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
   //Aca declarar nuestros states
   const [nombre, setNombre] = useState("");
   const [propietario, setPropietario] = useState("");
+  const [direccion, setDireccion] = useState("");
   const [email, setEmail] = useState("");
   const [fecha, setFecha] = useState("");
   const [sintomas, setSintomas] = useState("");
@@ -17,6 +18,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
     if (Object.keys(paciente).length > 0) {
       setNombre(paciente.nombre);
       setPropietario(paciente.propietario);
+      setDireccion(paciente.direccion);
       setEmail(paciente.email);
       setFecha(paciente.fecha);
       setSintomas(paciente.sintomas);
@@ -34,7 +36,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
     e.preventDefault();
 
     //Validacion de formulario
-    if ([nombre, propietario, email, fecha, sintomas].includes("")) {
+    if ([nombre, propietario, direccion, email, fecha, sintomas].includes("")) {
       setError(true);
       return;
     }
@@ -44,6 +46,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
     const objetoPaciente = {
       nombre,
       propietario,
+      direccion, // Nuevo campo añadido
       email,
       fecha,
       sintomas,
@@ -86,6 +89,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
     //reiniciar form
     setNombre("");
     setPropietario("");
+    setDireccion("");
     setEmail("");
     setFecha("");
     setSintomas("");
@@ -94,14 +98,14 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
   return (
     <div className="md:w-1/2 lg:w-2/5 mx-5">
       <main>
-        <h2 className="font-black text-2xl underline text-center">Seguimiento de pacientes</h2>
-
+        <h2 className="font-black text-2xl underline text-center">
+          Formulario Pacientes y Dueños
+        </h2>
         <p className="text-lg mt-5 text-center mb-10 font-semibold">
           Añade un paciente y
           <span className="text-indigo-600 font-bold "> administralo</span>
         </p>
       </main>
-
 
       <form
         onSubmit={handleSubmit}
@@ -134,7 +138,6 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
           >
             Nombre Propietario
           </label>
-
           <input
             type="text"
             id="propietario"
@@ -142,6 +145,22 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md focus:outline-none focus:border-indigo-400"
             value={propietario}
             onChange={(e) => setPropietario(e.target.value)}
+          />
+        </div>
+        <div className="mb-5">
+          <label
+            htmlFor="direccion"
+            className="block text-gray-700 uppercase font-bold"
+          >
+            Dirección Propietario
+          </label>
+          <input
+            type="text"
+            id="direccion"
+            placeholder="Dirección del propietario"
+            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md focus:outline-none focus:border-indigo-400"
+            value={direccion}
+            onChange={(e) => setDireccion(e.target.value)}
           />
         </div>
         <div className="mb-5">
