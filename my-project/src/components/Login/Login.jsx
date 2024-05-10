@@ -79,9 +79,6 @@ const Login = () => {
               >
                 {registrando ? "Registrate" : "Inicia Sesión"}
               </button>
-              {/* <button className="">
-                {registrando ? "Registrate" : "Inicia Sesión"}
-              </button> */}
             </div>
           </form>
           <div className="texto-login flex items-center gap-3 justify-center mt-2">

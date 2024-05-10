@@ -10,12 +10,12 @@ function Header() {
           <li className="text-indigo-600 font-bold">
             Veterinaria Ibarra & Rojas
           </li>
-          <buton
+          <button
             className="bg-red-200 p-2 rounded-md hover:bg-red-600 hover:text-white"
             onClick={() => signOut(auth)}
           >
             Cerrar sesión
-          </buton>
+          </button>
         </ul>
       </nav>
       <h1 className="text-4xl font-semibold uppercase text-center mx-auto mt-4 xl:font-bold xl:text-5xl">

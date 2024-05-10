@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 import Formulario from "./components/Formulario/Formulario";
 import Header from "./components/Header/Header";
 import ListadoPaciente from "./components/ListadoPaciente/ListadoPaciente";
+import {
+  Route,
+  Routes,
+} from "react-router-dom";
 
 // Importando los modulos de firebase
 import appFirebase from "../src/credenciales";
@@ -11,6 +15,7 @@ const auth = getAuth(appFirebase);
 
 // Importar nuestros componentes
 import Login from "../src/components/Login/Login";
+import Navbar from "./components/Content/NavBar/Navbar";
 // import Home from "../src/components/Home/Home";
 
 function App() {
@@ -55,7 +60,10 @@ function App() {
   }, []);
 
   return (
-    <div>
+    
+    <>
+    <Routes>
+      <Route path="/" element={<MainContent />} />
       {usuario ? (
         <>
         <Header />
@@ -78,9 +86,19 @@ function App() {
         </>
         
       ) : (
-        <Login />
+        <Route path="/login" element={<Login />} />
+        
       )}
-    </div>
+      </Routes>
+    </>
+  );
+}
+
+function MainContent() {
+  return (
+    <>
+      <Navbar />
+    </>
   );
 }
 
