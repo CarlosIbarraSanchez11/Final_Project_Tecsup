@@ -14,7 +14,7 @@ const ListadoPaciente = ({ pacientes, setPaciente, eliminarPaciente }) => {
   // }, [pacientes])
 
   return (
-    <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
+    <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll font-second">
       {pacientes && pacientes.length ? (
         <>
           <h2 className="font-black text-3xl text-center">
@@ -22,7 +22,7 @@ const ListadoPaciente = ({ pacientes, setPaciente, eliminarPaciente }) => {
           </h2>
           <p className="text-xl mt-5 mb-10 text-center">
             Administra tus {""}
-            <span className="text-indigo-600 font-bold">Pacientes y citas</span>
+            <span className="text-cyan-400 font-bold">Pacientes y citas</span>
           </p>
 
           {pacientes.map((paciente) => (
@@ -39,7 +39,7 @@ const ListadoPaciente = ({ pacientes, setPaciente, eliminarPaciente }) => {
           <h2 className="font-black text-3xl text-center">No hay Pacientes</h2>
           <p className="text-xl mt-5 mb-10 text-center">
             Comienza agregando Pacientes {""}
-            <span className="text-indigo-600 font-bold">
+            <span className="text-cyan-400 font-bold">
               y apareceran en este lugar
             </span>
           </p>

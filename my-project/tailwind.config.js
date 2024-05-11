@@ -2,7 +2,13 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        first: ["Tilt Prism", "sans-serif"],
+        second: ["Poetsen One", "sans-serif"],
+        third: ["Freeman", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

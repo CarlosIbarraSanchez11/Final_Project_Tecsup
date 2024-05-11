@@ -44,7 +44,7 @@ const Login = () => {
         />
       </div>
       {/* Lado derecho */}
-      <div className="flex  justify-center items-center p-2  lg:justify-center w-full lg:w-[800px] lg:h-[750px] ">
+      <div className="flex  justify-center items-center p-2  lg:justify-center w-full lg:w-[800px] lg:h-[750px] font-third">
         <div className="w-full lg:h-[700px] lg:w-[400px] lg:py-3 lg:px-4  p-2">
           <div className="text-center mb-8">
             <img
@@ -53,7 +53,9 @@ const Login = () => {
               className="mx-auto estilo-profile"
             />
           </div>
-          <p className="mb-5 text-center font-bold uppercase text-xl">Login </p>
+          <p className="mb-5 text-center font-bold uppercase text-3xl font-first">
+            Login{" "}
+          </p>
           <form onSubmit={functAutenticacion} className="px-4 lg:px-0">
             <div className="mb-6">
               <input
@@ -72,16 +74,19 @@ const Login = () => {
               />
             </div>
 
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left text-2xl">
               <button
                 type="submit"
                 className="w-full bg-green-600 text-white font-bold px-4 py-2 rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
               >
                 {registrando ? "Registrate" : "Inicia Sesión"}
               </button>
+              {/* <button className="">
+                {registrando ? "Registrate" : "Inicia Sesión"}
+              </button> */}
             </div>
           </form>
-          <div className="texto-login flex items-center gap-3 justify-center mt-2">
+          <div className="texto-login flex items-center gap-3 justify-center mt-2 text-2xl">
             {registrando ? "Si ya tienes cuenta " : "No tienes cuenta"}
             <button
               onClick={() => setRegistrando(!registrando)}

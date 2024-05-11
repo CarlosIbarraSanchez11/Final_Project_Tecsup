@@ -1,4 +1,3 @@
-
 .btnswitch {
   background-color: rgb(128, 128, 185);
   border-radius: 5px;
@@ -8,8 +7,7 @@
   font-weight: bold;
 }
 
-.texto-login{
+.texto-login {
   font-size: 14px;
   color: slategray;
-
 }

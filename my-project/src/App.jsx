@@ -3,10 +3,7 @@ import { useState, useEffect } from "react";
 import Formulario from "./components/Formulario/Formulario";
 import Header from "./components/Header/Header";
 import ListadoPaciente from "./components/ListadoPaciente/ListadoPaciente";
-import {
-  Route,
-  Routes,
-} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 // Importando los modulos de firebase
 import appFirebase from "../src/credenciales";
@@ -15,7 +12,6 @@ const auth = getAuth(appFirebase);
 
 // Importar nuestros componentes
 import Login from "../src/components/Login/Login";
-import Navbar from "./components/Content/NavBar/Navbar";
 // import Home from "../src/components/Home/Home";
 
 function App() {
@@ -60,44 +56,29 @@ function App() {
   }, []);
 
   return (
-    
     <>
-    <Routes>
-      <Route path="/" element={<MainContent />} />
       {usuario ? (
         <>
-        <Header />
-        <div className="container mx-auto mt-20">
-          
-          <div className="mt-12 md:flex">
-            <Formulario
-              pacientes={pacientes}
-              setPacientes={setPacientes}
-              paciente={paciente}
-              setPaciente={setPaciente}
-            />
-            <ListadoPaciente
-              pacientes={pacientes}
-              setPaciente={setPaciente}
-              eliminarPaciente={eliminarPaciente}
-            />
+          <Header />
+          <div className="container mx-auto mt-20">
+            <div className="mt-12 md:flex">
+              <Formulario
+                pacientes={pacientes}
+                setPacientes={setPacientes}
+                paciente={paciente}
+                setPaciente={setPaciente}
+              />
+              <ListadoPaciente
+                pacientes={pacientes}
+                setPaciente={setPaciente}
+                eliminarPaciente={eliminarPaciente}
+              />
+            </div>
           </div>
-        </div>
         </>
-        
       ) : (
-        <Route path="/login" element={<Login />} />
-        
+        <Login />
       )}
-      </Routes>
-    </>
-  );
-}
-
-function MainContent() {
-  return (
-    <>
-      <Navbar />
     </>
   );
 }
